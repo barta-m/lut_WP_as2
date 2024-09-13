@@ -3,7 +3,7 @@ function submitButton() {
 // Precte hodnoty z input boxu 
     const username = document.getElementById("input-username").value;
     const email = document.getElementById("input-email").value;
-    const admin = document.getElementById("input-admin").checked ? "O" : "-";
+    const admin = document.getElementById("input-admin").checked ? "X" : "-";
     const imageElement = document.getElementById("input-image");
     const image = imageElement.files[0];
     const rowExists = false;
