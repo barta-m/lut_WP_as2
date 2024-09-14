@@ -22,9 +22,9 @@ function submitButton() {
     const username = document.getElementById("input-username").value;
     const email = document.getElementById("input-email").value;
     const admin = document.getElementById("input-admin").checked ? "X" : "-";
-    const imageElement = document.getElementById("input-image");
-    const image = imageElement.files[0];
-    const rowExists = false;
+    let imageElement = document.getElementById("input-image");
+    let image = imageElement.files[0];
+    let rowExists = false;
     const table = document.getElementById("table").getElementsByTagName("tbody")[0];
     const rows = table.getElementsByTagName("tr");
 
