@@ -1,3 +1,21 @@
+let imageUrl = "";
+
+function getImage(event) {
+// do imageURL se uloží URL obrazku pro potom
+        const file = event.target.files[0];
+    
+        // Check if the file is an image
+        if (file && file.type.startsWith('image/')) {
+            imageUrl = URL.createObjectURL(file); // Create a URL for the image
+            console.log('Image URL stored: ', imageUrl); // Log the image URL
+        }
+    }
+    
+    // Add event listener to run when the user uploads an image
+    document.getElementById('input-image').addEventListener('change', getImage);
+
+
+
 function submitButton() {
 
 // Precte hodnoty z input boxu 
@@ -18,6 +36,15 @@ function submitButton() {
             event.preventDefault();
             cells[1].textContent = email;
             cells[2].textContent = admin;
+            cells[3].innerHTML = ""
+            if (imageUrl) {
+            const img2 = document.createElement("img");
+            img2.src = imageUrl;
+            img2.alt = "";
+            img2.width = 64;
+            img2.height = 64;
+            cells[3].appendChild(img2);
+            } 
             rowExists = true;
             break;
         }
@@ -29,6 +56,18 @@ function submitButton() {
     const newUsername = newRow.insertCell(0);
     const newEmail = newRow.insertCell(1);
     const newAdmin = newRow.insertCell(2);
+    const newImage = newRow.insertCell(3);
+
+    if (imageUrl) {
+    const img = document.createElement("img");
+    img.src = imageUrl;
+    img.alt = "";
+    img.width = 64;
+    img.height = 64;
+    newImage.appendChild(img);
+    } else {
+        newImage.innerHTML = "";
+    }
 
     // a přidá hodnoty do buňek toho řádku
     newUsername.textContent = username;
@@ -48,4 +87,3 @@ function emptyButton() {
     event.preventDefault();
 
 }
-
