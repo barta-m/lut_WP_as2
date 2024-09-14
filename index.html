@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>Assignment 2</title>
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
         <table id="table">
@@ -12,29 +13,40 @@
                 <th>Image</th>
             </thead>
             <tr>
-                <td>Webmaster</td>
-                <td>example@email.com</td>
+                <td>User 1</td>
+                <td>example1@email.com</td>
                 <td>X</td>
                 <td></td>
             </tr>
             <tr>
-                <td>User123</td>
-                <td>example@email.com</td>
+                <td>User 2</td>
+                <td>example2@email.com</td>
                 <td>-</td>
                 <td></td>
             </tr>
             <tr>
-                <td>AnotherUser222</td>
-                <td>example@email.com</td>
-                <td>-</td>
+                <td>User 3</td>
+                <td>example3@email.com</td>
+                <td>X</td>
                 <td></td>
             </tr>
         </table>
+        <br><hr><br>
 
         <form>
-            <input id="input-username" placeholder="Username"><br>
-            <input id="input-email" placeholder="Email"><br>
-            <input type="checkbox" id="input-admin" placeholder="Admin"> check if you are admin<br>
+            <fieldset class="inputs">
+                <label>Username: </label>
+                <input id="input-username" placeholder="username">
+            </fieldset>
+            <fieldset class="inputs">
+                <label>Email: </label>
+                <input id="input-email" placeholder="email">
+            </fieldset>
+            <fieldset class="inputs">
+                <label>Check if you are admin </label>
+                <input type="checkbox" id="input-admin">
+            </fieldset>
+
             <button id="submit-data" onclick="submitButton()">Submit data</button>
             <button id="empty-table" onclick="emptyButton()">Empty table</button>
             <input id="input-image" type="file" name="image" accept="image/*">

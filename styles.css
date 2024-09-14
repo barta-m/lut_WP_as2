@@ -1,0 +1,33 @@
+th, td {
+    text-align: left;
+    border: 1px solid black;
+    padding: 8px;
+}
+
+table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.inputs {
+    border: 2px solid grey;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+button {
+    margin-top: 10px;
+    font-size: 12px;;
+}
+
+input {
+    font-size: 12px;;
+}
+
+hr {
+    border: 0px;
+    height: 0px;
+    color: grey;
+    background-color: grey();
+    box-shadow: 0 0 9px 7px rgb(145, 108, 108);
+}
